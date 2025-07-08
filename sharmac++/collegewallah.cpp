@@ -92,15 +92,12 @@
 //  }
 
 // Modulus.
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    int x;
-    int y;
-    cout<<"Enter the value of x : ";
-    cin>>x;
-    cout<<"Enter the value of y : ";
-    cin>>y;
-    cout<<x%y;
+
+int main() {
+    int x, y;
+    cin >> x >> y;
+    cout << x % y;
     return 0;
 }
