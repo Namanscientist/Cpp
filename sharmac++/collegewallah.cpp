@@ -95,8 +95,12 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int x = 20;
-    int y = 3;
-    cout<<x%y<<endl;
+    int x;
+    int y;
+    cout<<"Enter the value of x : ";
+    cin>>x;
+    cout<<"Enter the value of y : ";
+    cin>>y;
+    cout<<x%y;
     return 0;
 }
