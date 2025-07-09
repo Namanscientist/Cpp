@@ -226,24 +226,41 @@
 // }
 
 //Take 3 positive integers input and print least no .of them.
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int a,b,c;
+//     cout<<"Enter the value of A : ";
+//     cin>>a;
+//     cout<<"Enter the value of B : ";
+//     cin>>b;
+//     cout<<"Enter the value of C : ";
+//     cin>>c;
+//     if(a<b && a<c){
+//         cout<<a<<"Is least number.";
+//     }
+//     else if(b<c && b<a){
+//         cout<<b<<"Is least number.";
+//     }
+//     else{
+//         cout<<c<<"Is least number";
+//     }
+//     return 0;
+// }
+
+#include <iostream>
 using namespace std;
-int main(){
-    int a,b,c;
-    cout<<"Enter the value of A : ";
-    cin>>a;
-    cout<<"Enter the value of B : ";
-    cin>>b;
-    cout<<"Enter the value of C : ";
-    cin>>c;
-    if(a<b && a<c){
-        cout<<a<<"Is least number.";
+
+int main() {
+    int x;
+    cout << "Enter a positive integer: ";
+    cin >> x;
+
+    if ((x % 5 == 0 || x % 3 == 0) && (x % 15 != 0)) {
+        cout << "The number is divisible by 3 or 5, but not by 15." << endl;
+    } else {
+        cout << "The condition is not satisfied." << endl;
     }
-    else if(b<c && b<a){
-        cout<<b<<"Is least number.";
-    }
-    else{
-        cout<<c<<"Is least number";
-    }
+
     return 0;
 }
