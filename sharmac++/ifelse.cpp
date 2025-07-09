@@ -184,20 +184,43 @@
 
 //Take 3 number input and tell if they can be sides of 
 // a triangle.
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int a , b , c;
+//       cout << "Enter the side of A: ";
+//     cin >> a;
+//     cout << "Enter the side of B: ";
+//     cin >> b;
+//     cout << "Enter the side of C: ";
+//     cin >> c; //sum of 2 sides should greater than 3rd side.
+//     if((a+b)>c && (c+a)>a && (c+a)>b){
+//         cout<<"VALID TRIANGLE";
+//     }
+//     else{
+//         cout<<"INVALID TRIANGLE";
+//     }
+// }
+
+// Take 3 positive integers input and print the
+// greatest of them.
 #include<iostream>
 using namespace std;
 int main(){
     int a , b , c;
-      cout << "Enter the side of A: ";
-    cin >> a;
-    cout << "Enter the side of B: ";
-    cin >> b;
-    cout << "Enter the side of C: ";
-    cin >> c; //sum of 2 sides should be less or more than 3rd side.
-    if((a+b)>c && (c+a)>a && (c+a)>b){
-        cout<<"VALID TRIANGLE";
+    cout<<"Enter the value of A : ";
+    cin>>a;
+     cout<<"Enter the value of B : ";
+    cin>>b;
+     cout<<"Enter the value of C : ";
+    cin>>c;
+    if(a>b){
+        cout<<"A is greatest number.";
+    }
+    else if(b>c){
+        cout<<"B is greatest number.";
     }
     else{
-        cout<<"INVALID TRIANGLE";
+        cout<<"C is greatest number.";
     }
 }
