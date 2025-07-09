@@ -92,12 +92,12 @@
 //  }
 
 // Modulus.
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int x, y;
-    cin >> x >> y;
-    cout << x % y;
-    return 0;
-}
+// int main() {
+//     int x, y;
+//     cin >> x >> y;
+//     cout << x % y;
+//     return 0;
+// }

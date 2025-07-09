@@ -3,8 +3,15 @@
 #include<iostream>
 using namespace std;
 int main(){
-    char c;
+    char ch;
     cout<<"Enter the Alphabet : ";
-    cin>>c;
+    cin>>ch;
+    if(ch=='a' ||ch=='e' ||ch=='i' ||ch=='o' ||ch=='u' ||ch=='A' ||ch=='E' ||ch=='I' ||ch=='O' ||ch=='U'){
+        cout<<"It is a vowel";
+    }
+    else{
+        cout<<"Consonant";
+    }
+    return 0;
     
 }
