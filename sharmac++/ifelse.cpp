@@ -81,25 +81,25 @@
 //Given the length and breadth of a rectangle, WAP to 
 //find whether the area of the rectanglee is greater
 //its perimeter.
-#include<iostream>
-using namespace std;
-int main(){
-    int l , b , area , perimeter;
-    cout<<"Enter the length : ";
-    cin>>l;
-    cout<<"Enter the breadth : ";
-    cin>>b;
-    area = l*b;
-    cout<<area<<endl;
-    perimeter = 2*(l+b);
-    if(area>perimeter){
-        cout<<"Area is greater than perimeter"<<endl;
-    }
-    else{
-        cout<<"Perimeter is greater than area";
-    }
-    return 0;
-}
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int l , b , area , perimeter;
+//     cout<<"Enter the length : ";
+//     cin>>l;
+//     cout<<"Enter the breadth : ";
+//     cin>>b;
+//     area = l*b;
+//     cout<<area<<endl;
+//     perimeter = 2*(l+b);
+//     if(area>perimeter){
+//         cout<<"Area is greater than perimeter"<<endl;
+//     }
+//     else{
+//         cout<<"Perimeter is greater than area";
+//     }
+//     return 0;
+// }
 
 //Topic : "multiple conditions using && and ||".
 //Take positive integer input and tell if it is a 
