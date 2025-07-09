@@ -204,23 +204,46 @@
 
 // Take 3 positive integers input and print the
 // greatest of them.
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int a , b , c;
+//     cout<<"Enter the value of A : ";
+//     cin>>a;
+//      cout<<"Enter the value of B : ";
+//     cin>>b;
+//      cout<<"Enter the value of C : ";
+//     cin>>c;
+//     if(a>b){
+//         cout<<a<<"A is greatest number."<<endl;
+//     }
+//     else if(b<c){
+//         cout<<b<<"B is greatest number."<<endl;
+//     }
+//     else{
+//         cout<<c<<"C is greatest number."<<endl;
+//     }
+// }
+
+//Take 3 positive integers input and print least no .of them.
 #include<iostream>
 using namespace std;
 int main(){
-    int a , b , c;
+    int a,b,c;
     cout<<"Enter the value of A : ";
     cin>>a;
-     cout<<"Enter the value of B : ";
+    cout<<"Enter the value of B : ";
     cin>>b;
-     cout<<"Enter the value of C : ";
+    cout<<"Enter the value of C : ";
     cin>>c;
-    if(a>b){
-        cout<<"A is greatest number.";
+    if(a<b && a<c){
+        cout<<a<<"Is least number.";
     }
-    else if(b>c){
-        cout<<"B is greatest number.";
+    else if(b<c && b<a){
+        cout<<b<<"Is least number.";
     }
     else{
-        cout<<"C is greatest number.";
+        cout<<c<<"Is least number";
     }
+    return 0;
 }
