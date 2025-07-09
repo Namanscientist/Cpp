@@ -193,7 +193,7 @@ int main(){
     cout << "Enter the side of B: ";
     cin >> b;
     cout << "Enter the side of C: ";
-    cin >> c; //sum of 2 sides should be less or more than 3 side.
+    cin >> c; //sum of 2 sides should be less or more than 3rd side.
     if((a+b)>c && (c+a)>a && (c+a)>b){
         cout<<"VALID TRIANGLE";
     }
