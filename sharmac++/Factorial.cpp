@@ -1,22 +1,22 @@
 // Find Factorial take number as input using loop.
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int n;
-    long long factorial = 1;
+// int main() {
+//     int n;
+//     long long factorial = 1;
 
-    cout << "Enter a positive integer: ";
-    cin >> n;
+//     cout << "Enter a positive integer: ";
+//     cin >> n;
 
-    if (n < 0)
-        cout << "Factorial of a negative number doesn't exist.";
-    else {
-        for (int i = 1; i <= n; ++i) {
-            factorial *= i;
-        }
-        cout << "Factorial of " << n << " = " << factorial;
-    }
+//     if (n < 0)
+//         cout << "Factorial of a negative number doesn't exist.";
+//     else {
+//         for (int i = 1; i <= n; ++i) {
+//             factorial *= i;
+//         }
+//         cout << "Factorial of " << n << " = " << factorial;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
