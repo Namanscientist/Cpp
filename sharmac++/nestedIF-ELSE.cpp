@@ -4,22 +4,28 @@
 using namespace std;
 int main(){
     int a,b,c;
-    cout<<"Enter the value of a : ";
+    cout<<"Enter the first number : ";
     cin>>a;
-    cout<<"Enter the value of b : ";
+    cout<<"Enter the second number : ";
     cin>>b;
-    cout<<"Enter the value of c : ";
+    cout<<"Enter the third number : ";
     cin>>c;
-    if(a>b){  // b can never be greatest.
+    if(a>b){  // b can never be greater.
         if(a>c){
-            cout<<a<< "Is greatest number.";
+            cout<<a<<"Is greater number";
         }
         else{
-            cout<<c<< "Is greatest number.";
+            cout<<c<<"Is greater number";
+        }
     }
+    else{
+        if(b>c){
+            cout<<b<<"Is greater number";
+        }
+        else{
+            cout<<c<<"Is greater number";
+        }
+    }
+    return 0;
 }
-else{
-    cout<<b<< "Is greatest.";
-}
-return 0;
-}
+
