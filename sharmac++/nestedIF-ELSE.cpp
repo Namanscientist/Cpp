@@ -1,6 +1,6 @@
 // NESTED if-else
 // greatest of three using nested loop.
-// #include<iostream>
+//#include<iostream>
 // using namespace std;
 // int main(){
 //     int a,b,c;
@@ -31,34 +31,69 @@
 
 //If the age of Ram , Shyam , Ajay are input through the
 //Keybiard. WAP to determinr youngest of the three.
+// #include<iostream>
+// using namespace std;
+// int main(){
+//  int  Ram , Shyam , Ajay ;
+//  cout<<"Enter the age of Ram : ";
+//  cin>>Ram;
+
+//   cout<<"Enter the age of Shyam : ";
+//   cin>>Shyam;
+  
+//    cout<<"Enter the age of Ajay : ";
+//    cin>>Ajay;
+  
+//  if(Ram<Shyam){
+//     if(Ram<Ajay){
+//         cout<<Ram<<" Is youngest";
+//     }
+//     else{
+//        cout<<Ajay<<" Is youngest";
+//     }
+//  }
+//  else{
+//     if(Shyam<Ajay){
+//         cout<<Shyam<<" Is youngest";
+//     }
+//     else{
+//         cout<<Ajay<<"Is youngest";
+//     }
+//  }
+//  return 0;
+// }
+
+// Take input percentage of a student and print the GRADE
+// according to the marks.
+
 #include<iostream>
 using namespace std;
-int main(){
- int  Ram , Shyam , Ajay ;
- cout<<"Enter the age of Ram : ";
- cin>>Ram;
 
-  cout<<"Enter the age of Shyam : ";
-  cin>>Shyam;
-  
-   cout<<"Enter the age of Ajay : ";
-   cin>>Ajay;
-  
- if(Ram<Shyam){
-    if(Ram<Ajay){
-        cout<<Ram<<" Is youngest";
+int main(){
+    float percentage;
+    cout << "Enter the percentage: ";
+    cin >> percentage;
+if(percentage >= 80 && percentage<=100){
+        cout << "Grade A";
     }
-    else{
-       cout<<Ajay<<" Is youngest";
+    else if(percentage >= 70){
+        cout << "Grade B";
     }
- }
- else{
-    if(Shyam<Ajay){
-        cout<<Shyam<<" Is youngest";
+    else if(percentage >= 60){
+        cout << "Grade C";
     }
-    else{
-        cout<<Ajay<<"Is youngest";
+    else if(percentage >= 50){
+        cout << "Grade D";
     }
- }
- return 0;
+    else if(percentage >= 40){
+        cout << "Grade E";
+    }
+    else if(percentage >= 0 && percentage < 40){
+        cout << "FAIL!";
+    }
+    else {
+        cout << "Invalid percentage entered.";
+    }
+
+    return 0;
 }
