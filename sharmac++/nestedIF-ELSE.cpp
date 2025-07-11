@@ -66,34 +66,63 @@
 // Take input percentage of a student and print the GRADE
 // according to the marks.
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     float percentage;
+//     cout << "Enter the percentage: ";
+//     cin >> percentage;
+// if(percentage >= 80 && percentage<=100){
+//         cout << "Grade A";
+//     }
+//     else if(percentage >= 70){
+//         cout << "Grade B";
+//     }
+//     else if(percentage >= 60){
+//         cout << "Grade C";
+//     }
+//     else if(percentage >= 50){
+//         cout << "Grade D";
+//     }
+//     else if(percentage >= 40){
+//         cout << "Grade E";
+//     }
+//     else if(percentage >= 0 && percentage < 40){
+//         cout << "FAIL!";
+//     }
+//     else {
+//         cout << "Invalid percentage entered.";
+//     }
+//     return 0;
+// }
 
-int main(){
-    float percentage;
-    cout << "Enter the percentage: ";
-    cin >> percentage;
-if(percentage >= 80 && percentage<=100){
-        cout << "Grade A";
-    }
-    else if(percentage >= 70){
-        cout << "Grade B";
-    }
-    else if(percentage >= 60){
-        cout << "Grade C";
-    }
-    else if(percentage >= 50){
-        cout << "Grade D";
-    }
-    else if(percentage >= 40){
-        cout << "Grade E";
-    }
-    else if(percentage >= 0 && percentage < 40){
-        cout << "FAIL!";
-    }
-    else {
-        cout << "Invalid percentage entered.";
-    }
+// Givwn a point (x,y) , WAP to find out if it lies in the
+// 1st Quadrant, 2nd Quadrant, 3rd Quadrant, $th Quadrant
+// on the x-axis, y-axis or at origin viz.(0,0);
 
-    return 0;
-}
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int x;
+//     int y;
+//     cout<<"Enter the value of x : ";
+//     cin>>x;
+//     cout<<"Enter the value of y : ";
+//     cin>>y;
+//     if(x>0 && y>0){
+//         cout<<"x and y both lies in 1st quadrant";
+//     }
+//     else if(x<0 && y>0){
+//         cout<<"x and y both lies in 2nd quadrant";
+//     }
+//     else if(x<0 && y<0){
+//         cout<<"x and y both lies in 3rd quadrant";
+//     }
+//     else if(x>0 && y<0){
+//         cout<<"x and y both lies in 4th quadrant";
+//     }
+//     else{
+//         cout<<"x and y lies on origin";
+//     }
+//     return 0;
+// }
