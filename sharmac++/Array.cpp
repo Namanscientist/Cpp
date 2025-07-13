@@ -56,12 +56,46 @@
 // }
 
 //Find Second largest number in array.
+// #include<iostream>
+// #include<climits>  // Include for INT_MIN
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Enter number of elements: ";
+//     cin >> n;
+
+//     int arr[n];
+//     cout << "Enter " << n << " elements:\n";
+//     for(int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     int largest = INT_MIN, secondLargest = INT_MIN;
+
+//     for(int i = 0; i < n; i++) {
+//         if(arr[i] > largest) {
+//             secondLargest = largest;
+//             largest = arr[i];
+//         } else if(arr[i] > secondLargest && arr[i] != largest) {
+//             secondLargest = arr[i];
+//         }
+//     }
+
+//     if(secondLargest == INT_MIN)
+//         cout << "There is no second largest element." << endl;
+//     else
+//         cout << "Second largest element: " << secondLargest << endl;
+
+//     return 0;
+// }
+
+//count frequency of specific elements given from user.
 #include<iostream>
-#include<climits>  // Include for INT_MIN
 using namespace std;
 
 int main() {
-    int n;
+    int n, searchElement, count = 0;
     cout << "Enter number of elements: ";
     cin >> n;
 
@@ -71,21 +105,15 @@ int main() {
         cin >> arr[i];
     }
 
-    int largest = INT_MIN, secondLargest = INT_MIN;
+    cout << "Enter the element to search for: ";
+    cin >> searchElement;
 
     for(int i = 0; i < n; i++) {
-        if(arr[i] > largest) {
-            secondLargest = largest;
-            largest = arr[i];
-        } else if(arr[i] > secondLargest && arr[i] != largest) {
-            secondLargest = arr[i];
-        }
+        if(arr[i] == searchElement)
+            count++;
     }
 
-    if(secondLargest == INT_MIN)
-        cout << "There is no second largest element." << endl;
-    else
-        cout << "Second largest element: " << secondLargest << endl;
+    cout << "Frequency of " << searchElement << ": " << count << endl;
 
     return 0;
 }
