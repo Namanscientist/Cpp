@@ -26,7 +26,38 @@
 // }
 
 // Reverse the array.
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Enter number of elements: ";
+//     cin >> n;
+
+//     int arr[n];
+//     cout << "Enter " << n << " elements:\n";
+//     for(int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     // Reversing the array
+//     for(int i = 0; i < n / 2; i++) {
+//         int temp = arr[i];
+//         arr[i] = arr[n - 1 - i];
+//         arr[n - 1 - i] = temp;
+//     }
+
+//     cout << "Reversed array:\n";
+//     for(int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+
+//     return 0;
+// }
+
+//Find Second largest number in array.
 #include<iostream>
+#include<climits>  // Include for INT_MIN
 using namespace std;
 
 int main() {
@@ -40,17 +71,21 @@ int main() {
         cin >> arr[i];
     }
 
-    // Reversing the array
-    for(int i = 0; i < n / 2; i++) {
-        int temp = arr[i];
-        arr[i] = arr[n - 1 - i];
-        arr[n - 1 - i] = temp;
+    int largest = INT_MIN, secondLargest = INT_MIN;
+
+    for(int i = 0; i < n; i++) {
+        if(arr[i] > largest) {
+            secondLargest = largest;
+            largest = arr[i];
+        } else if(arr[i] > secondLargest && arr[i] != largest) {
+            secondLargest = arr[i];
+        }
     }
 
-    cout << "Reversed array:\n";
-    for(int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
+    if(secondLargest == INT_MIN)
+        cout << "There is no second largest element." << endl;
+    else
+        cout << "Second largest element: " << secondLargest << endl;
 
     return 0;
 }
