@@ -62,8 +62,48 @@
 //     return 0;
 // }
 
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int x, y;
+//     char ch;
+
+//     cout << "Enter the value of x: ";
+//     cin >> x;
+//     cout << "Enter the value of y: ";
+//     cin >> y;
+//     cout << "Enter the operator (+, -, *, /): ";
+//     cin >> ch;
+
+//     switch(ch){
+//         case '-':
+//             cout << x - y;
+//             break;
+//         case '+':
+//             cout << x + y;
+//             break;
+//         case '*':
+//             cout << x * y;
+//             break;
+//         case '/':
+//             if (y != 0)
+//                 cout << x / y;
+//             else
+//                 cout << "Error: Division by zero!";
+//             break;
+//         default:
+//             cout << "Invalid Operator";
+//     }
+
+//     return 0;
+// }
+
 #include<iostream>
 using namespace std;
 int main(){
-    
+    int x=3 , y,z;
+    y=x=10;
+    z=x<10;
+    cout<<x<<" "<<y<<" "<<z;
 }

@@ -91,29 +91,29 @@
 // }
 
 //count frequency of specific elements given from user.
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-int main() {
-    int n, searchElement, count = 0;
-    cout << "Enter number of elements: ";
-    cin >> n;
+// int main() {
+//     int n, searchElement, count = 0;
+//     cout << "Enter number of elements: ";
+//     cin >> n;
 
-    int arr[n];
-    cout << "Enter " << n << " elements:\n";
-    for(int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+//     int arr[n];
+//     cout << "Enter " << n << " elements:\n";
+//     for(int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
 
-    cout << "Enter the element to search for: ";
-    cin >> searchElement;
+//     cout << "Enter the element to search for: ";
+//     cin >> searchElement;
 
-    for(int i = 0; i < n; i++) {
-        if(arr[i] == searchElement)
-            count++;
-    }
+//     for(int i = 0; i < n; i++) {
+//         if(arr[i] == searchElement)
+//             count++;
+//     }
 
-    cout << "Frequency of " << searchElement << ": " << count << endl;
+//     cout << "Frequency of " << searchElement << ": " << count << endl;
 
-    return 0;
-}
+//     return 0;
+// }
