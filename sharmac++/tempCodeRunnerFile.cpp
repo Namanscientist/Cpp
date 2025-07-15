@@ -1,14 +1,16 @@
-#include<iostream>
-using namespace std;
-int main(){
-    int x;
-    cout<<"Enter the number : ";
-    cin>>x;
-    if(x%5==0 && x%3==0){
-        cout<<"Divisible by both 3 and 5";
-    }
-    else{
-        cout<<"NOT Divisible by both 3 and 5";
-    }
-    return 0;
-}
+if(x>y){
+    //     if(x>z){
+    //         cout<<x<<"Is greatest number";
+    //     }
+    //     else{
+    //         cout<<z<<"Is greatest number";
+    //     }
+    // }
+    // else{
+    //     if(y>z){
+    //         cout<<y<<"Is greatest number";
+    //     }
+    //     else{
+    //         cout<<z<<"Is greatest number";
+    //     }
+    // }

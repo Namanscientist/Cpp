@@ -126,3 +126,52 @@
 //     }
 //     return 0;
 // }
+
+#include<iostream>
+using namespace std;
+int main(){
+    int x,y,z;
+    cout<<"Enter the value of x : ";
+    cin>>x;
+    cout<<"Enter the value of y : ";
+    cin>>y;
+    cout<<"Enter the value of z : ";
+    cin>>z;
+    // if(x>y){
+    //     if(x>z){
+    //         cout<<x<<"Is greatest number";
+    //     }
+    //     else{
+    //         cout<<z<<"Is greatest number";
+    //     }
+    // }
+    // else{
+    //     if(y>z){
+    //         cout<<y<<"Is greatest number";
+    //     }
+    //     else{
+    //         cout<<z<<"Is greatest number";
+    //     }
+    // }
+
+    int large = 0;
+    if(x>y && x>z){
+        large = x;
+    }
+    else if(y>x && y>z) large = y;
+    else large = z;
+
+    int small = 0;
+    if(x<y && x<z) small = x;
+    else if(y<x && y<z) small = y;
+    else small = z;
+
+    cout << "large" << large << endl;
+    cout << "small" << small << endl;
+    
+    // increasing 
+    int sum = x+y+z;
+    cout << "increasing" << small <<" " << sum - ( small + large )<<" " << large<<" " << endl;
+    cout << "decreasing" << large <<" " << sum - ( small + large )<<" " << small <<" "<< endl;
+    return 0;
+}
