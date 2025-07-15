@@ -13,34 +13,62 @@
 //     cin>>a;
 //     cout<<"Enter the value of B : ";
 //     cin>>b;
-    #include<iostream>
-#include<bitset>  // for binary representation
+//     #include<iostream>
+// #include<bitset>  // for binary representation.
+// using namespace std;
+
+// int main() {
+//     int a, b;
+//     cout << "Enter first number (a): ";
+//     cin >> a;
+//     cout << "Enter second number (b): ";
+//     cin >> b;
+
+//     //  Binary representation
+//     cout << "\nBinary of a: " << bitset<8>(a) << endl;
+//     cout << "Binary of b: " << bitset<8>(b) << endl;
+
+//     //  Bitwise Operations
+//     cout << "\na & b = " << (a & b) << " --> " << bitset<8>(a & b) << endl;
+//     cout << "a | b = " << (a | b) << " --> " << bitset<8>(a | b) << endl;
+//     cout << "a ^ b = " << (a ^ b) << " --> " << bitset<8>(a ^ b) << endl;
+//     cout << "~a = " << (~a) << " --> " << bitset<8>(~a) << endl;
+//     cout << "a << 1 = " << (a << 1) << " --> " << bitset<8>(a << 1) << endl;
+//     cout << "a >> 1 = " << (a >> 1) << " --> " << bitset<8>(a >> 1) << endl;
+
+//     //  Practical Uses
+//     cout << "\nPractical Use Cases:\n";
+//     cout << "- Check if a is even or odd: " << ((a & 1) ? "Odd" : "Even") << endl;
+//     cout << "- a multiplied by 2 using left shift: " << (a << 1) << endl;
+//     cout << "- a divided by 2 using right shift: " << (a >> 1) << endl;
+
+//     return 0;
+// }
+
+#include<iostream>
 using namespace std;
 
-int main() {
-    int a, b;
-    cout << "Enter first number (a): ";
-    cin >> a;
-    cout << "Enter second number (b): ";
-    cin >> b;
+int main(){
+    int age;
+    int salary;
 
-    //  Binary representation
-    cout << "\nBinary of a: " << bitset<8>(a) << endl;
-    cout << "Binary of b: " << bitset<8>(b) << endl;
+    cout << "Enter the age: ";
+    cin >> age;
+    if(age < 20 || age > 90){
+        cout << "Invalid age";
+        return 0;
+    }
+    cout << "Enter the salary: ";
+    cin >> salary;
 
-    //  Bitwise Operations
-    cout << "\na & b = " << (a & b) << " --> " << bitset<8>(a & b) << endl;
-    cout << "a | b = " << (a | b) << " --> " << bitset<8>(a | b) << endl;
-    cout << "a ^ b = " << (a ^ b) << " --> " << bitset<8>(a ^ b) << endl;
-    cout << "~a = " << (~a) << " --> " << bitset<8>(~a) << endl;
-    cout << "a << 1 = " << (a << 1) << " --> " << bitset<8>(a << 1) << endl;
-    cout << "a >> 1 = " << (a >> 1) << " --> " << bitset<8>(a >> 1) << endl;
+    
+    if(salary >= 40000 && age>20 && age<=90){
+        cout << "Loan is approved.";
 
-    //  Practical Uses
-    cout << "\nPractical Use Cases:\n";
-    cout << "- Check if a is even or odd: " << ((a & 1) ? "Odd" : "Even") << endl;
-    cout << "- a multiplied by 2 using left shift: " << (a << 1) << endl;
-    cout << "- a divided by 2 using right shift: " << (a >> 1) << endl;
+    }
+    else{
+        cout << "Loan is not approved.";
+    }
 
     return 0;
 }
