@@ -154,24 +154,25 @@ int main(){
     //     }
     // }
 
-    int large = 0;
-    if(x>y && x>z){
-        large = x;
-    }
-    else if(y>x && y>z) large = y;
-    else large = z;
+//     int large = 0;
+//     if(x>y && x>z){
+//         large = x;
+//     }
+//     else if(y>x && y>z) large = y;
+//     else large = z;
 
-    int small = 0;
-    if(x<y && x<z) small = x;
-    else if(y<x && y<z) small = y;
-    else small = z;
+//     int small = 0;
+//     if(x<y && x<z) small = x;
+//     else if(y<x && y<z) small = y;
+//     else small = z;
 
-    cout << "large" << large << endl;
-    cout << "small" << small << endl;
+//     cout << "large" << large << endl;
+//     cout << "small" << small << endl;
     
-    // increasing 
-    int sum = x+y+z;
-    cout << "increasing" << small <<" " << sum - ( small + large )<<" " << large<<" " << endl;
-    cout << "decreasing" << large <<" " << sum - ( small + large )<<" " << small <<" "<< endl;
-    return 0;
-}
+//     // increasing. 
+//     int sum = x+y+z;
+//     cout << "increasing" << small <<" " << sum - ( small + large )<<" " << large<<" " << endl;
+//    // decreasing. 
+//     cout << "decreasing" << large <<" " << sum - ( small + large )<<" " << small <<" "<< endl;
+//     return 0;
+// }
