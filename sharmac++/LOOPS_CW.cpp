@@ -74,15 +74,46 @@
 //     }
 // }
 
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n,x;
+//     cout<<"Enter the number of terms : ";// how many no. printed.
+//     cin>>n;
+//     cout<<"Enter the no. of gaps : ";
+//     cin>>x;
+//     for(int i=1; i<=n*x-1; i+=x){
+//             cout<<i<<" ";
+//     }
+// }
+
+// Display this GP(geomwtric progression) - 1,2,4,8,16,32,64..n.
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int x;
+//     cout << "Enter the value of x: ";
+//     cin >> x;
+
+//     int a = 4;
+//     for(int i = 1; i <= x; i++){
+//         cout << a << " ";
+//         a = a * 3;
+//     }
+//     return 0;
+// }
+
 #include<iostream>
 using namespace std;
 int main(){
-    int n,x;
-    cout<<"Enter the number of terms : ";// how many no. printed.
-    cin>>n;
-    cout<<"Enter the no. of gaps : ";
-    cin>>x;
-    for(int i=1; i<=n*x-1; i+=x){
-            cout<<i<<" ";
+    int x;
+    cout << "Enter the value of x: ";
+    cin >> x;
+
+    int a = 3;
+    for(int i = 1; i <= x; i++){
+        cout << a << " ";
+        a = a * 4;
     }
+    return 0;
 }
