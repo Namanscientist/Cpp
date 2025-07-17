@@ -1,0 +1,133 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  padding: 15px 30px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links a.active {
+  border-bottom: 2px solid #fff;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero h1 {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: #fff;
+  font-family: Georgia, serif;
+}
+
+/* Categories */
+.categories {
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.category {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #000;
+  padding: 20px;
+}
+.gallery-item {
+  text-align: center;
+  margin: 10px;
+  color: #fff;
+}
+.gallery-item img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.gallery-item p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #ccc;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+.footer-right a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+.footer-right a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #003366;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    padding: 10px;
+  }
+  .hamburger {
+    display: block;
+  }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo Gallery with Dropdown</title>
+  <link rel="stylesheet" href="demo.css" />
+  <style>
+    /* Basic nav styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #222;
+      color: white;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      height: 60px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 40px;
+      cursor: pointer;
+    }
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+      flex-grow: 1;
+    }
+    ul.nav-links > li {
+      position: relative;
+    }
+    ul.nav-links > li > a {
+      text-decoration: none;
+      color: white;
+      padding: 20px 10px;
+      display: block;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+    }
+    ul.nav-links > li:hover > a {
+      background-color: #444;
+    }
+    #email a {
+  color: white;
+  text-decoration: underline; /* optional, to keep it clear it's a link */
+}
+
+#email a:hover {
+  color: #ddd; /* lighter on hover */
+}
+
+
+    /* Dropdown container */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      min-width: 160px;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 20;
+      padding: 10px 0;
+    }
+    .dropdown a {
+      color: white;
+      padding: 10px 20px;
+      display: block;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .dropdown a:hover {
+      background-color: #555;
+    }
+
+    /* Show dropdown on hover */
+    ul.nav-links > li:hover > .dropdown {
+      display: block;
+    }
+
+    /* Content padding so sections are not hidden behind fixed nav */
+    section {
+      padding: 100px 20px 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MyLogo</div>
+  <ul class="nav-links">
+    <li>
+      <a href="#welcome">Home</a>
+      <div class="dropdown">
+        <a href="#welcome">Welcome</a>
+        <a href="#intro">Introduction</a>
+        <a href="#updates">Updates</a>
+      </div>
+    </li>
+
+    <li>
+      <a href="#about">About Us</a>
+      <div class="dropdown">
+        <a href="#team">Our Team</a>
+        <a href="#history">History</a>
+        <a href="#mission">Mission & Vision</a>
+      </div>
+    </li>
+
+    <li>
+      <a href="#gallery">Gallery</a>
+      <div class="dropdown">
+        <a href="#outdoor">Outdoor</a>
+        <a href="#golf">Golf</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#clubhouse">Clubhouse</a>
+        <a href="#lifestyle">Lifestyle</a>
+      </div>
+    </li>
+
+    <li>
+      <a href="#contact">Contact</a>
+      <div class="dropdown">
+        <a href="#email">Email</a>
+        <a href="#phone">Phone</a>
+        <a href="#address">Address</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<section id="welcome">
+  <h1>Welcome to My Website</h1>
+  <p>
+    This is the landing page of the website. Here you can introduce your visitors to the brand, purpose, or mission. Click the navigation links above to explore more about us.
+  </p>
+</section>
+
+<section id="about">
+  <h1>About Us</h1>
+  <p>
+    Welcome to our website! We are passionate about delivering the best products and services to our customers. Our team is dedicated to innovation and quality. Stay tuned for more updates.
+  </p>
+</section>
+
+<section id="contact">
+  <h1>Contact Us</h1>
+  <p>
+    Have questions or want to get in touch? You can reach us via email at namansharma2005206@gmail.com or call us at 9992628188. We look forward to hearing from you!
+  </p>
+</section>
+
+<!-- New Contact Subsections -->
+<section id="email">
+  <h2>Email</h2>
+  <p>You can email us anytime at <a href="mailto:namansharma2005206@gmail.com">namansharma2005206@gmail.com</a>.</p>
+</section>
+
+<section id="phone">
+  <h2>Phone</h2>
+  <p>Call us at <a href="tel:+9992628188">9992628188</a>. Our lines are open from 9 AM to 6 PM.</p>
+</section>
+
+<section id="address">
+  <h2>Address</h2>
+  <p>Visit us at:<br />
+  123 Demo Street,<br />
+  Demo City, Country 45678</p>
+</section>
+
+<section id="gallery">
+  <h1>Gallery</h1>
+  <p>
+    Explore our gallery to see photos from recent events, projects, and behind-the-scenes moments. We love sharing our journey with our community.
+  </p>
+  <div class="gallery - row">
+    <div class = "gallery-item">
+    <img src="ocean webpage.avif" style="width:100vw; height:50vh; object-fit:cover; border-radius:10px;" alt="Outdoor Pursuits" />
+  </div>
+  <div class=" gallery-item">
+    <img  src="landscape webpage.avif" height="250" width="340" alt="Landscape">
+    <img  src="golf webpage.avif" height="250" width="340" alt="Golf" >
+    <img  src="wellness webpage.avif" height="250" width="340"  alt="Wellness" >
+    </div>
+    <div>
+    <div class = "gallery-item">
+    <img  src="outdoor pursuits webpage.avif" height="250" width="340" alt = "Outdoor Pursuits">
+    <img  src="clubhouse webpage.avif" height="250" width="340" alt="Clubhouse" >
+    <img  src="lifestyle webpage.avif" height="250" width="340" alt="Lifestyle" >
+  </div>
+</section>
+
+<section id="company">
+  <h1>Our Company</h1>
+  <p>
+    Founded in 2020, our company has grown from a small startup to a thriving business. Our mission is to provide excellent value and foster strong relationships with our clients.
+  </p>
+</section>
+</body>
+</html>
