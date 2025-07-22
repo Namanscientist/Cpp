@@ -158,53 +158,85 @@
 // Fahrenheit: 77.00°F
 // Kelvin: 298.15K
 
-#include <iostream>
-#include <iomanip>
+// #include <iostream>
+// #include <iomanip>
+// using namespace std;
+
+// int main() {
+//     double temperature, celsius, fahrenheit, kelvin;
+//     char unit;
+
+//     // Input
+//     cout << "Enter temperature: ";
+//     cin >> temperature;
+//     cout << "Enter unit (C/F/K): ";
+//     cin >> unit;
+
+//     // Conversion logic
+//     switch(toupper(unit)) {
+//         case 'C':
+//             celsius = temperature;
+//             fahrenheit = (celsius * 9/5) + 32;
+//             kelvin = celsius + 273.15;
+//             break;
+//         case 'F':
+//             fahrenheit = temperature;
+//             celsius = (fahrenheit - 32) * 5/9;
+//             kelvin = celsius + 273.15;
+//             break;
+//         case 'K':
+//             kelvin = temperature;
+//             celsius = kelvin - 273.15;
+//             fahrenheit = (celsius * 9/5) + 32;
+//             break;
+//         default:
+//             cout << "Invalid unit entered!" << endl;
+//             return 1;
+//     }
+
+//     // Output
+//     cout << fixed << setprecision(2);
+//     cout << "\nOriginal: " << temperature;
+//     if (unit == 'C' || unit == 'c') cout << "°C";
+//     else if (unit == 'F' || unit == 'f') cout << "°F";
+//     else if (unit == 'K' || unit == 'k') cout << "K";
+//     cout << endl;
+
+//     cout << "Celsius: " << celsius << "°C" << endl;
+//     cout << "Fahrenheit: " << fahrenheit << "°F" << endl;
+//     cout << "Kelvin: " << kelvin << "K" << endl;
+
+//     return 0;
+// }
+
+// Write a C++ program that:
+// Takes an integer as input
+// Uses logical operators to check multiple properties:
+// Is it even or odd?
+// Is it positive, negative, or zero?
+// Is it divisible by both 3 and 5?
+// Is it a single digit number?
+// Display all results using boolean logic and conditional output
+
+#include<iostream>
 using namespace std;
-
 int main() {
-    double temperature, celsius, fahrenheit, kelvin;
-    char unit;
-
-    // Input
-    cout << "Enter temperature: ";
-    cin >> temperature;
-    cout << "Enter unit (C/F/K): ";
-    cin >> unit;
-
-    // Conversion logic
-    switch(toupper(unit)) {
-        case 'C':
-            celsius = temperature;
-            fahrenheit = (celsius * 9/5) + 32;
-            kelvin = celsius + 273.15;
-            break;
-        case 'F':
-            fahrenheit = temperature;
-            celsius = (fahrenheit - 32) * 5/9;
-            kelvin = celsius + 273.15;
-            break;
-        case 'K':
-            kelvin = temperature;
-            celsius = kelvin - 273.15;
-            fahrenheit = (celsius * 9/5) + 32;
-            break;
-        default:
-            cout << "Invalid unit entered!" << endl;
-            return 1;
-    }
-
-    // Output
-    cout << fixed << setprecision(2);
-    cout << "\nOriginal: " << temperature;
-    if (unit == 'C' || unit == 'c') cout << "°C";
-    else if (unit == 'F' || unit == 'f') cout << "°F";
-    else if (unit == 'K' || unit == 'k') cout << "K";
-    cout << endl;
-
-    cout << "Celsius: " << celsius << "°C" << endl;
-    cout << "Fahrenheit: " << fahrenheit << "°F" << endl;
-    cout << "Kelvin: " << kelvin << "K" << endl;
-
+    int x;
+    cout << "Enter the value of x : ";
+    cin >> x;
+    if(x % 2 == 0)
+        cout << "Even Number." << endl;
+    else
+        cout << "Odd Number." << endl;
+    if(x > 0)
+        cout << "Positive Number." << endl;
+    else if(x < 0)
+        cout << "Negative Number." << endl;
+    else
+        cout << "Zero." << endl;
+    if(x % 3 == 0 && x % 5 == 0)
+        cout << "Divisible by both 3 and 5." << endl;
+    else
+        cout << "Not Divisible by both 3 and 5." << endl;
     return 0;
 }
