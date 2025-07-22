@@ -80,3 +80,80 @@
 
 //     return 0;
 // }
+
+// Write a C++ program that:
+// Declares variables for employee ID (int), employee name (string), basic salary (double), and years
+// of experience (int)
+// Takes input from user for all values
+// Calculates bonus based on experience: 5% for <2 years, 10% for 2-5 years, 15% for >5 years
+// Calculates total salary (basic + bonus)
+// Uses appropriate data types and displays formatted output
+
+// Enter Employee ID: 1001
+// Enter Employee Name: John Smith
+// Enter Basic Salary: 50000
+// Enter Years of Experience: 3
+
+// === EMPLOYEE DETAILS ===
+// ID: 1001
+// Name: John Smith
+// Basic Salary: $50000.00
+// Experience: 3 years
+// Bonus Rate: 10%
+// Bonus Amount: $5000.00
+// Total Salary: $55000.00
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int empID, yearsOfExp;
+    string empName;
+    double basicSalary, bonusRate, bonusAmount, totalSalary;
+
+    cout << "Enter Employee ID: ";
+    cin >> empID;
+    cout << "Enter Employee Name: ";
+    cin>>empName;
+    cout << "Enter Basic Salary: ";
+    cin >> basicSalary;
+    cout << "Enter Years of Experience: ";
+    cin >> yearsOfExp;
+
+    if (yearsOfExp < 2)
+        bonusRate = 0.05;
+    else if (yearsOfExp <= 5)
+        bonusRate = 0.10;
+    else
+        bonusRate = 0.15;
+    bonusAmount = basicSalary * bonusRate;
+    totalSalary = basicSalary + bonusAmount;
+    cout << "=== EMPLOYEE DETAILS ===" << endl;
+    cout << "ID: " << empID << endl;
+    cout << "Name: " << empName << endl;
+    cout << "Basic Salary: $" << basicSalary << endl;
+    cout << "Experience: " << yearsOfExp << " years" << endl;
+    cout << "Bonus Rate: " << (bonusRate * 100) << "%" << endl;
+    cout << "Bonus Amount: $" << bonusAmount << endl;
+    cout << "Total Salary: $" << totalSalary << endl;
+
+    return 0;
+}
+
+// Write a C++ program that:
+// Takes a temperature value and unit (C/F/K) as input
+// Uses arithmetic operators to convert between Celsius, Fahrenheit, and Kelvin
+// Displays the temperature in all three units
+// Use appropriate variable types (float/double for precision)
+// Conversion Formulas:
+// C to F: F = (C × 9/5) + 32
+// C to K: K = C + 273.15
+// F to C: C = (F - 32) × 5/9
+
+// Sample Input:
+// Enter temperature: 25
+// Enter unit (C/F/K): C
+// Expected Output:
+// Original: 25.00°C
+// Fahrenheit: 77.00°F
+// Kelvin: 298.15K
