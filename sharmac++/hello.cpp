@@ -103,42 +103,42 @@
 // Bonus Amount: $5000.00
 // Total Salary: $55000.00
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int empID, yearsOfExp;
-    string empName;
-    double basicSalary, bonusRate, bonusAmount, totalSalary;
+// int main() {
+//     int empID, yearsOfExp;
+//     string empName;
+//     double basicSalary, bonusRate, bonusAmount, totalSalary;
 
-    cout << "Enter Employee ID: ";
-    cin >> empID;
-    cout << "Enter Employee Name: ";
-    cin>>empName;
-    cout << "Enter Basic Salary: ";
-    cin >> basicSalary;
-    cout << "Enter Years of Experience: ";
-    cin >> yearsOfExp;
+//     cout << "Enter Employee ID: ";
+//     cin >> empID;
+//     cout << "Enter Employee Name: ";
+//     cin>>empName;
+//     cout << "Enter Basic Salary: ";
+//     cin >> basicSalary;
+//     cout << "Enter Years of Experience: ";
+//     cin >> yearsOfExp;
 
-    if (yearsOfExp < 2)
-        bonusRate = 0.05;
-    else if (yearsOfExp <= 5)
-        bonusRate = 0.10;
-    else
-        bonusRate = 0.15;
-    bonusAmount = basicSalary * bonusRate;
-    totalSalary = basicSalary + bonusAmount;
-    cout << "=== EMPLOYEE DETAILS ===" << endl;
-    cout << "ID: " << empID << endl;
-    cout << "Name: " << empName << endl;
-    cout << "Basic Salary: $" << basicSalary << endl;
-    cout << "Experience: " << yearsOfExp << " years" << endl;
-    cout << "Bonus Rate: " << (bonusRate * 100) << "%" << endl;
-    cout << "Bonus Amount: $" << bonusAmount << endl;
-    cout << "Total Salary: $" << totalSalary << endl;
+//     if (yearsOfExp < 2)
+//         bonusRate = 0.05;
+//     else if (yearsOfExp <= 5)
+//         bonusRate = 0.10;
+//     else
+//         bonusRate = 0.15;
+//     bonusAmount = basicSalary * bonusRate;
+//     totalSalary = basicSalary + bonusAmount;
+//     cout << "=== EMPLOYEE DETAILS ===" << endl;
+//     cout << "ID: " << empID << endl;
+//     cout << "Name: " << empName << endl;
+//     cout << "Basic Salary: $" << basicSalary << endl;
+//     cout << "Experience: " << yearsOfExp << " years" << endl;
+//     cout << "Bonus Rate: " << (bonusRate * 100) << "%" << endl;
+//     cout << "Bonus Amount: $" << bonusAmount << endl;
+//     cout << "Total Salary: $" << totalSalary << endl;
 
-    return 0;
-}
+//     return 0;
+// }
 
 // Write a C++ program that:
 // Takes a temperature value and unit (C/F/K) as input
@@ -157,3 +157,54 @@ int main() {
 // Original: 25.00°C
 // Fahrenheit: 77.00°F
 // Kelvin: 298.15K
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double temperature, celsius, fahrenheit, kelvin;
+    char unit;
+
+    // Input
+    cout << "Enter temperature: ";
+    cin >> temperature;
+    cout << "Enter unit (C/F/K): ";
+    cin >> unit;
+
+    // Conversion logic
+    switch(toupper(unit)) {
+        case 'C':
+            celsius = temperature;
+            fahrenheit = (celsius * 9/5) + 32;
+            kelvin = celsius + 273.15;
+            break;
+        case 'F':
+            fahrenheit = temperature;
+            celsius = (fahrenheit - 32) * 5/9;
+            kelvin = celsius + 273.15;
+            break;
+        case 'K':
+            kelvin = temperature;
+            celsius = kelvin - 273.15;
+            fahrenheit = (celsius * 9/5) + 32;
+            break;
+        default:
+            cout << "Invalid unit entered!" << endl;
+            return 1;
+    }
+
+    // Output
+    cout << fixed << setprecision(2);
+    cout << "\nOriginal: " << temperature;
+    if (unit == 'C' || unit == 'c') cout << "°C";
+    else if (unit == 'F' || unit == 'f') cout << "°F";
+    else if (unit == 'K' || unit == 'k') cout << "K";
+    cout << endl;
+
+    cout << "Celsius: " << celsius << "°C" << endl;
+    cout << "Fahrenheit: " << fahrenheit << "°F" << endl;
+    cout << "Kelvin: " << kelvin << "K" << endl;
+
+    return 0;
+}
