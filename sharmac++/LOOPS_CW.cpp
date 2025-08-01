@@ -103,17 +103,151 @@
 //     return 0;
 // }
 
-#include<iostream>
-using namespace std;
-int main(){
-    int x;
-    cout << "Enter the value of x: ";
-    cin >> x;
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int x;
+//     cout << "Enter the value of x: ";
+//     cin >> x;
 
-    int a = 3;
-    for(int i = 1; i <= x; i++){
-        cout << a << " ";
-        a = a * 4;
-    }
+//     int a = 3;
+//     for(int i = 1; i <= x; i++){
+//         cout << a << " ";
+//         a = a * 4;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <memory>
+// using namespace std;
+// int main() {
+//     std::unique_ptr<int> p1(new int(42));
+//     std::cout << "Number : " << *p1 << std::endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <memory>
+// using namespace std;
+
+// int main() {
+//     shared_ptr<int> p1 = make_shared<int>(42);
+//     shared_ptr<int> p2 = p1;
+//     cout << "Value from p1: " << *p1 << endl;
+//     cout << "Value from p2: " << *p2 << endl;
+//     cout << "Use count (shared owners): " << p1.use_count() << endl;
+
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// void print(int x) {
+//      cout << "int: " << x <<endl;
+// }
+// void print(float x) {
+//      cout << "float: " << x <<endl;
+// }
+// int main(){
+//     print(10);
+//     print(65.232f);
+//     return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+// void change(int x) {
+//     x = 10;  // Modifies local copy
+// }
+// int main() {
+//     int num = 5;
+//     change(num);  // Still 5 after function call
+//     cout << "Value of num after calling change: " << num << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// void change(int &x) {
+//     x = 10;  // Directly modifies the original variable
+// }
+// int main() {
+//     int num = 5;
+//     change(num);  // num is now updated
+//     cout << "Value of num after calling change: " << num << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int& getfirst(int arr[], int size) {
+//     return arr[0];  // Return reference to first element
+// }
+// int main() {
+//     int data[3] = {1, 2, 3};  // Use curly braces for array initialization
+//     getfirst(data, 3) = 99;   // Modify data[0] directly
+//     cout << data[0] << endl;  // Will print 99
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// // Function returns reference to the largest element
+// int& getLargest(int arr[], int size) {
+//     int maxIndex = 0;
+//     for (int i = 1; i < size; ++i) {
+//         if (arr[i] > arr[maxIndex]) {
+//             maxIndex = i;
+//         }
+//     }
+//     return arr[maxIndex];  // Return by reference
+// }
+// int main() {
+//     int data[] = {12, 45, 32, 67, 28};
+//     int size = sizeof(data) / sizeof(data[0]);
+//     // Print before modification
+//     cout << "Before: ";
+//     for (int i = 0; i < size; ++i) {
+//         cout << data[i] << " ";
+//     }
+//     cout << endl;
+//     // Modify the largest value
+//     getLargest(data, size) = 0;
+//     // Print after modification
+//     cout << "After: ";
+//     for (int i = 0; i < size; ++i) {
+//         cout << data[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int a, b;
+//     cout << "Enter two numbers: ";
+//     cin >> a >> b;
+//     cout << "Before swap: a = " << a << ", b = " << b << endl;
+//     int c = a;
+//     a = b;
+//     b = c;
+//     cout << "After swap:  a = " << a << ", b = " << b << endl;
+//     return 0;
+// }
+
+#include <iostream>
+using namespace std;
+void doubleValue(int* ptr) {
+    *ptr = (*ptr) * 2;
+}
+int main() {
+    int num ;
+    cout << "Before: num = " << num << endl;
+    cin>>num;
+    doubleValue(&num); 
+    cout << "After:  num = " << num << endl;
     return 0;
 }

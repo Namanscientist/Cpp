@@ -218,25 +218,125 @@
 // Is it a single digit number?
 // Display all results using boolean logic and conditional output
 
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+// int main() {
+//     int x;
+//     cout << "Enter the value of x : ";
+//     cin >> x;
+//     if(x % 2 == 0)
+//         cout << "Even Number." << endl;
+//     else
+//         cout << "Odd Number." << endl;
+//     if(x > 0)
+//         cout << "Positive Number." << endl;
+//     else if(x < 0)
+//         cout << "Negative Number." << endl;
+//     else
+//         cout << "Zero." << endl;
+//     if(x % 3 == 0 && x % 5 == 0)
+//         cout << "Divisible by both 3 and 5." << endl;
+//     else
+//         cout << "Not Divisible by both 3 and 5." << endl;
+//     if(x>-10 && x<9){
+//         cout<<"Single digit number.";
+//     }
+//     else{
+//         cout<<"Not single digit number.";
+//     }
+//     return 0;
+// }
+
+// Question 4: BankingSystem withLocal/Global Variables
+// Write a C++ program that simulates a simple banking system:
+// Use a global variable totalBankBalance to track overall bank money
+// Create functions:
+// depositMoney(double amount) - adds to both account and total bank balance
+// withdrawMoney(double amount) - deducts if sufficient balance exists
+// displayBalances() - shows both account and total bank balance
+// In main(), demonstrate how local account balance and global bank balance work differently
+// Use static local variable inside functions to count total transactions
+
+#include <iostream>
 using namespace std;
+
+// 🌐 Global variables to track shared balances
+double totalBankBalance = 0.0;
+double accountBalance = 0.0;  // Shared across all functions
+
+// 💰 Function to deposit money
+void depositMoney(double amount) {
+    static int depositCount = 0;
+    depositCount++;
+
+    accountBalance += amount;
+    totalBankBalance += amount;
+
+    cout << "[Deposit #" << depositCount << "] Amount: ₹" << amount << endl;
+    cout << " -> Account Balance: ₹" << accountBalance << endl;
+    cout << " -> Total Bank Balance: ₹" << totalBankBalance << endl << endl;
+}
+
+// 💸 Function to withdraw money
+void withdrawMoney(double amount) {
+    static int withdrawCount = 0;
+    withdrawCount++;
+
+    if (amount <= accountBalance) {
+        accountBalance -= amount;
+        totalBankBalance -= amount;
+        cout << "[Withdrawal #" << withdrawCount << "] Amount: ₹" << amount << endl;
+    } else {
+        cout << "[Withdrawal #" << withdrawCount << "] ❌ Insufficient funds! Attempted ₹" << amount << endl;
+    }
+
+    cout << " -> Account Balance: ₹" << accountBalance << endl;
+    cout << " -> Total Bank Balance: ₹" << totalBankBalance << endl << endl;
+}
+
+// 📊 Function to display both balances
+void displayBalances() {
+    cout << "[Display] Account Balance: ₹" << accountBalance << endl;
+    cout << "[Display] Total Bank Balance: ₹" << totalBankBalance << endl << endl;
+}
+
+// 🚀 Main simulation loop
 int main() {
-    int x;
-    cout << "Enter the value of x : ";
-    cin >> x;
-    if(x % 2 == 0)
-        cout << "Even Number." << endl;
-    else
-        cout << "Odd Number." << endl;
-    if(x > 0)
-        cout << "Positive Number." << endl;
-    else if(x < 0)
-        cout << "Negative Number." << endl;
-    else
-        cout << "Zero." << endl;
-    if(x % 3 == 0 && x % 5 == 0)
-        cout << "Divisible by both 3 and 5." << endl;
-    else
-        cout << "Not Divisible by both 3 and 5." << endl;
+    cout << "📌 Banking System Simulation Started\n" << endl;
+
+    int choice;
+    double amount;
+
+    do {
+        cout << "Choose an option:\n";
+        cout << "1. Deposit Money\n";
+        cout << "2. Withdraw Money\n";
+        cout << "3. Display Balances\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch(choice) {
+            case 1:
+                cout << "Enter amount to deposit: ₹";
+                cin >> amount;
+                depositMoney(amount);
+                break;
+            case 2:
+                cout << "Enter amount to withdraw: ₹";
+                cin >> amount;
+                withdrawMoney(amount);
+                break;
+            case 3:
+                displayBalances();
+                break;
+            case 4:
+                cout << "🔚 Exiting Simulation.\n";
+                break;
+            default:
+                cout << "❌ Invalid choice. Try again.\n\n";
+        }
+    } while(choice != 4);
+
     return 0;
 }

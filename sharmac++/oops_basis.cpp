@@ -33,20 +33,26 @@
 
 //     return 0;
 
+// #include<iostream>
+// using namespace std;
+// int main() {
+//     int x;
+//     cout << "Enter the year: ";
+//     cin >> x;
+//     if (x <= 0) {
+//         cout << "Invalid year";
+//     }
+//     else if ((x % 5 == 0 && !(x % 35 == 0) || (x % 77 != 0))) {
+//         cout << "Leap Year";
+//     }
+//     else {
+//         cout << "Not a Leap Year";
+//     }
+//     return 0;
+// }
+
 #include<iostream>
 using namespace std;
-int main() {
-    int x;
-    cout << "Enter the year: ";
-    cin >> x;
-    if (x <= 0) {
-        cout << "Invalid year";
-    }
-    else if ((x % 5 == 0 && !(x % 35 == 0) || (x % 77 != 0))) {
-        cout << "Leap Year";
-    }
-    else {
-        cout << "Not a Leap Year";
-    }
-    return 0;
+int main(){
+    
 }
