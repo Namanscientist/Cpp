@@ -122,27 +122,51 @@
 //     return 0;
 // }
 
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+// struct point{
+//     int x;
+//     int y;
+// };
+// int main(){
+//     point p1,p2;
+//     p1.x = 3;
+//     p2.x = 6;
+//     p1.y = 5;
+//     p2.y = 4;
+//     cout<<"Addition : ("<<p1.x + p2.y<<","<<p2.x + p1.y<<")"<<endl;
+//     cout<<"Subtraction : ("<<p1.x - p2.y<<","<<p2.x - p1.y<<")"<<endl;
+//     cout<<"Subtraction : ("<<p1.x * p2.y<<","<<p2.x * p1.y<<")"<<endl;
+
+//     if(p2.y !=0 && p2.x !=0){
+//     cout<<"Division : ("<<p1.x / p2.y<<","<<p2.x / p1.y<<")"<<endl;
+//    }
+//    else{
+//     cout<<"Cannot be divided by zero."<<endl;
+//    }
+//    return 0;
+// }
+
+// define a struct called book with 2 members int paper; and int price;
+// create a variable of type book (on the stack), assign values and print them in cpp.
+#include <iostream>
 using namespace std;
 struct point{
-    int x;
-    int y;
+int paper;
+double price;
 };
 int main(){
-    point p1,p2;
-    p1.x = 3;
-    p2.x = 6;
-    p1.y = 5;
-    p2.y = 4;
-    cout<<"Addition : ("<<p1.x + p2.y<<","<<p2.x + p1.y<<")"<<endl;
-    cout<<"Subtraction : ("<<p1.x - p2.y<<","<<p2.x - p1.y<<")"<<endl;
-    cout<<"Subtraction : ("<<p1.x * p2.y<<","<<p2.x * p1.y<<")"<<endl;
-
-    if(p2.y !=0 && p2.x !=0){
-    cout<<"Division : ("<<p1.x / p2.y<<","<<p2.x / p1.y<<")"<<endl;
-   }
-   else{
-    cout<<"Cannot be divided by zero."<<endl;
-   }
-   return 0;
+    int pages;
+    double price;
+    point myBook;
+    cout<<"Enter thr number of pages in a book : ";
+    cin>>pages;
+    cout<<"Price of the book : ";
+    cin>>price;
+    myBook.paper = pages;
+    myBook.price = price;
+    cout<<"\n Book Details :";
+    cout<<"pages : "<<myBook.paper<<endl;
+    cout<<"price : "<<myBook.price<<endl;
+    return 0;
 }
