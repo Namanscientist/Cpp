@@ -266,14 +266,26 @@
 // }
 
 //Print the table of 'n'. Here 'n' is a integer take input.
-#include<iostream>
-using namespace std;
-int main(){
-    int n;
-    cout<<"Enter the number : ";
-    cin>>n;
-      for (int i=1;i<=10;i++){
-        cout<<n<<"x"<<i<<"="<<n*i<<endl;
-    }
-    return 0;
-}
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n;
+//     cout<<"Enter the number : ";
+//     cin>>n;
+//       for (int i=1;i<=10;i++){
+//         cout<<n<<"x"<<i<<"="<<n*i<<endl;
+//     }
+//     return 0;
+// }
+
+//Display this AP - 1,3,5,,7,9.. upto 'n' terms .
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n;
+//     cout<<"Enter the first digit : ";
+//     cin>>n;
+//     for (int i=1;i<=10*n-1;i+=10){
+//         cout<<i<<" "<<endl;
+//     }    
+// }
