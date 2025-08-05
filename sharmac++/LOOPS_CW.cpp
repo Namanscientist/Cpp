@@ -283,9 +283,31 @@
 // using namespace std;
 // int main(){
 //     int n;
-//     cout<<"Enter the first digit : ";
+//     cout<<"Enter the starting digit : ";
 //     cin>>n;
-//     for (int i=1;i<=10*n-1;i+=10){
-//         cout<<i<<" "<<endl;
-//     }    
+//     // for (int i=1;i<=10*n-1;i+=10){
+//     //     cout<<i<<" "<<endl;
+//     // }
+//     int a =4;
+//     for(int i=1;i<=n;i++){
+//         cout<<a<<" ";
+//         a = a+5;
+//     }
 // }
+
+//Display this GP - 1,2,4,8,16,32,64.....n terms.
+#include<iostream>
+using namespace std;
+int main() {
+    int n;
+    cout << "Enter the number of terms: ";
+    cin >> n;
+    int a = 1; // You can change this to any starting value
+    for (int i = 1; i <= n; i++) {
+        cout << a << " ";
+        a = a * 2;
+    }
+    return 0;
+}
+
+
