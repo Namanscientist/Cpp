@@ -238,16 +238,42 @@
 //     return 0;
 // }
 
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+// void doubleValue(int* ptr) {
+//     *ptr = (*ptr) * 2;
+// }
+// int main() {
+//     int num ;
+//     cout << "Before: num = " << num << endl;
+//     cin>>num;
+//     doubleValue(&num); 
+//     cout << "After:  num = " << num << endl;
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     // for (int i=19;i<=190;i++){
+//     //     if(i%19==0)
+//     //     cout<<i<<" "<<endl;
+//     // }
+//       for (int i=19;i<=190;i+=19){
+//         cout<<i<<" "<<endl;
+//     }
+//     return 0;
+// }
+
+//Print the table of 'n'. Here 'n' is a integer take input.
+#include<iostream>
 using namespace std;
-void doubleValue(int* ptr) {
-    *ptr = (*ptr) * 2;
-}
-int main() {
-    int num ;
-    cout << "Before: num = " << num << endl;
-    cin>>num;
-    doubleValue(&num); 
-    cout << "After:  num = " << num << endl;
+int main(){
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+      for (int i=1;i<=10;i++){
+        cout<<n<<"x"<<i<<"="<<n*i<<endl;
+    }
     return 0;
 }

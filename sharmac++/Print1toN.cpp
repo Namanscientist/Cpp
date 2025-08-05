@@ -149,24 +149,44 @@
 
 // define a struct called book with 2 members int paper; and int price;
 // create a variable of type book (on the stack), assign values and print them in cpp.
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+// struct point{
+// int paper;
+// double price;
+// };
+// int main(){
+//     int pages;
+//     double price;
+//     point myBook;
+//     cout<<"Enter thr number of pages in a book : ";
+//     cin>>pages;
+//     cout<<"Price of the book : ";
+//     cin>>price;
+//     myBook.paper = pages;
+//     myBook.price = price;
+//     cout<<"\n Book Details :";
+//     cout<<"pages : "<<myBook.paper<<endl;
+//     cout<<"price : "<<myBook.price<<endl;
+//     return 0;
+// }
+
+#include<iostream>
 using namespace std;
-struct point{
-int paper;
-double price;
+class Rectangle {
+    public:
+    int width;
+    int height;
 };
-int main(){
-    int pages;
-    double price;
-    point myBook;
-    cout<<"Enter thr number of pages in a book : ";
-    cin>>pages;
-    cout<<"Price of the book : ";
-    cin>>price;
-    myBook.paper = pages;
-    myBook.price = price;
-    cout<<"\n Book Details :";
-    cout<<"pages : "<<myBook.paper<<endl;
-    cout<<"price : "<<myBook.price<<endl;
-    return 0;
+int main() {
+    int width , height;
+    cout<<"Enter the width : ";
+    cin>>width;
+    cout<<"Enter the height : ";
+    cin>>height;
+Rectangle box;
+box.width = width;
+box.height = height;
+cout << box.width * box.height <<endl;
+return 0;
 }
