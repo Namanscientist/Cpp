@@ -296,18 +296,32 @@
 // }
 
 //Display this GP - 1,2,4,8,16,32,64.....n terms.
+// #include<iostream>
+// using namespace std;
+// int main() {
+//     int n;
+//     cout << "Enter the number of terms: ";
+//     cin >> n;
+//     int a = n; // You can change this to any starting value
+//     for (int i = 1; i <= n; i++) {
+//         cout << a << " ";
+//         a = a * 2;
+//     }
+//     return 0;
+// }
+
+//WAP to find the highest factor of a number "n" 
+//(other than n itself).
 #include<iostream>
 using namespace std;
-int main() {
+int main(){
     int n;
-    cout << "Enter the number of terms: ";
-    cin >> n;
-    int a = 1; // You can change this to any starting value
-    for (int i = 1; i <= n; i++) {
-        cout << a << " ";
-        a = a * 2;
+    cout<<"Enter the number : ";
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        if(n%i==0)
+        cout<<i<<" ";
     }
     return 0;
+
 }
-
-
